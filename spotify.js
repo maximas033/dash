@@ -22,7 +22,6 @@ recognition.onend = function() {
 
 if(event.results[0][0].transcript.includes("play")){
     // get the second word in the transcript
-    let song = event.results[0][0].transcript.split(" ")[1];
     // fetch the song from https://v1.nocodeapi.com/maximascoder/spotify/dsSeokgAWyGgNoTe/search?q=song
     fetch(`https://v1.nocodeapi.com/maximascoder/spotify/igugFUmJFsAugqBD/search?q=chill music`)
         .then((response) => {
