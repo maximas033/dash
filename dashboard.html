@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Home DashBoard</title>
+    <!-- Link to the css files -->
+    <link rel="stylesheet", type="text/css", href="dashboarddecoration.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">    
+  </head>
+  <body onload="gettheCurrentWeather(), getCalendarEvents(), getSpotify(), getSpotifyRecommendations(), displayBackground(), displayFullDay(), getJokes()">
+    <section class="currenttime">
+        <div>
+            <h1 id="displayTime"></h1>
+        </div>
+    </section>
+    <!-- Side menue for the dahsboard-->
+    <section class="dashboard" id="side_dashboard">
+        <div>
+            <ul class="sidelist">
+                <li>
+                    <img src="dashboard.png">
+                </li>
+                <li>
+                    <img src="ceiling-lamp.png">
+                </li>
+              </ul>  
+        </div>
+    </section>
+
+<section class="allInformation">
+
+    <section class="topInformation">
+        <!-- top 3 -->
+        <section class="displayJoke">
+            <div>
+                <h1 id="greeting2"></h1>
+                <h3 id="wishes"></h3>
+            </div>
+        </section>
+
+        <!-- Displays weather -->
+        <section class="displayWeather" id="WEath">
+            <div class="one">
+                <div>
+                    <h5 id="cityName"></h5>
+                </div>
+                <div id="displayP">
+                    <img src="" id="picture">
+                </div>
+            </div>
+
+            <div class="two">
+                <div>
+                    <h5 id="weatherDescription"></h5>
+                </div>
+                <div>
+                    <h2 id="temperature"></h2>
+                </div>
+            </div>
+
+            <div class="three">
+                <div>
+                    <h5 id="timerise"></h5>
+                </div>
+
+                <div>
+                    <h5 id="timeset"></h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="displayFullDay">
+                <div>
+                    <h1 id="greeting"></h1>
+                    <h3 id="date"></h3>
+                </div>
+        </section>
+
+    </section>
+        
+
+
+<div class="allsecond">
+    <section class="bottomInformation">
+        <div></div>
+        <!-- Calendar information-->
+        <section class="displayCalendat">
+            <h3>NO DATA YET</h3>
+        </section>
+
+
+        <section class="displayspoti">
+            <div>
+                <h4 id="noSong"></h4>
+            </div>
+            <div id="displaySpotify">
+                
+            </div>
+        </section>
+
+
+
+
+            <!-- Spotify information-->
+            <section class="displaySomething">
+                <h2>Calendar</h2>
+
+                <div id="eventsToDo">
+
+                </div>
+            </section>
+            <div></div>
+    </section>
+</div>
+</section>
+
+
+    <script src="displayTime.js"></script>
+    <script src="changebackground.js"></script>
+    <script src="fetchweather.js"></script>
+    <script src="getCalendarEvents.js"></script>
+    <script src="spotify.js"></script>
+    <script src="fetchrecomindations.js"></script>
+    <script src="displayCurrentDay.js"></script>
+    <script src="fetchJokes.js"></script>
+    <script src="greetingsecond.js"></script>
+  </body>
+</html>

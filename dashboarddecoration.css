@@ -1,0 +1,267 @@
+*{
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.currenttime{
+    font-size: 30px;
+    font-weight: lighter;
+    color: #fff;
+    text-align: right;
+    margin-right: 4%;
+}
+
+.dashboard .sidelist{
+    list-style: none;
+    align-items: left;
+}
+
+.sidelist{
+    padding: 0;
+}
+
+.sidelist img{
+    width: 4.5%;
+    height: 4.5%;
+    background-color: transparent;
+    margin-bottom: 3%;
+}
+
+
+
+.topInformation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    overflow-x: hidden;
+    align-items: center;
+    height: 130px;
+}
+
+
+
+.allInformation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    align-items: center;
+}
+
+
+/* display teperature inside */
+.displayJoke{
+    background-color: #fff;
+    width: 30%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.displayJoke h1{
+    margin-top: 5%;
+    padding-left: 1%;
+    color:#000;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.displayJoke #wishes{
+    margin-bottom: 5%;
+    padding-left: 1%;
+    color: /* modern grey */ #9E9E9E;
+}
+
+
+/* display weather outside */
+.displayWeather{
+    width: 30%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    margin: 0;
+    color: black;
+    padding-left: 10px;
+    opacity: 0.8;
+    padding-right: 10px;
+}
+
+.displayWeather #cityName{
+    color: #000;
+    padding-left: 1%;
+    font-weight: lighter;
+    margin-bottom: 5%;
+}
+
+.one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+#picture{
+    width: 30px;
+    height: 30px;
+    margin-top: 5%;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+}
+
+#displayP {
+    margin-top: 4.5%;
+}
+
+
+.two{
+    margin-top: -12%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#temperature{
+    font-weight: bold;
+}
+
+#weatherDescription{
+    font-weight: lighter;
+    text-align: center;
+    vertical-align: center;
+}
+
+.three{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: lighter;
+    color: #000;
+}
+
+
+.displayFullDay{
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+#greeting{
+    font-size: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.displayFullDay #day{
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+.bottomInformation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    margin-left: 1;
+}
+
+.displayCalendat{
+    width: 29%;
+    height: 200px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-right: 0%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.displayCalendat h3{
+    color: #9E9E9E;
+    text-align: center;
+    vertical-align: center;
+}
+
+#none{
+    border-left: 2px solid red;
+}
+
+#dayCurrentNow{
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}
+
+#noEvents{
+    padding-left: 10px;
+    color: red;
+}
+
+#eventsToDo{
+    padding-left: 10px;
+}
+
+
+
+.displayspoti{
+    width: 30%;
+    height: 200px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    opacity: 0.9;
+    overflow-x: scroll;
+    vertical-align: center;
+}
+
+#noSong{
+    text-align: center;
+    color: /* light gray */ #d3d3d3;
+}
+
+.displaySomething{
+    width: 30%;
+    margin-right: 1%;
+    height: 200px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    opacity: 0.9;
+    overflow-x: scroll;
+    vertical-align: center;
+}
+
+.displaySomething h2{
+    text-align: center;
+    color: #000;
+    text-align: left;
+    margin-left: 1.5%;
+}
