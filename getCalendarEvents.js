@@ -18,6 +18,7 @@ function getCalendarEvents(){
                 return data
             }
             else{
+                document.getElementById("eventsToDo").innerHTML = " ";
                 // loop through data.items.summary array and add each item to the list
                 for (var i = 0; i < data.items.length; i++) {
                     var li = document.createElement("li");
@@ -40,5 +41,7 @@ function getCalendarEvents(){
         }
     )
 }
+
+
 
 
