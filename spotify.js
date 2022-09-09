@@ -14,8 +14,9 @@ recognition.onresult = function(event) {
     }
 // onstop listening for speech
 recognition.onend = function() {
-    // while true keep listening for speech
+    // always start listening again
     recognition.start();
+        
 }
 
 
