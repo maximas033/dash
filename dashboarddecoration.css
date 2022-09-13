@@ -11,22 +11,17 @@
     margin-right: 4%;
 }
 
-.dashboard .sidelist{
-    list-style: none;
-    align-items: left;
+#lockModeOn{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-weight: bold;
+    color: white;
+    opacity: 0.6;
+    font-size: 55px;
 }
-
-.sidelist{
-    padding: 0;
-}
-
-.sidelist img{
-    width: 4.5%;
-    height: 4.5%;
-    background-color: transparent;
-    margin-bottom: 3%;
-}
-
 
 
 .topInformation{
@@ -184,7 +179,7 @@
     margin-left: 1;
 }
 
-.displayCalendat{
+.displayReminders{
     width: 29%;
     height: 200px;
     background-color: #fff;
@@ -196,34 +191,16 @@
     padding-bottom: 10px;
 }
 
-.displayCalendat h3{
+.displayReminders h3{
     color: #9E9E9E;
     text-align: center;
     vertical-align: center;
 }
 
-#none{
-    border-left: 2px solid red;
-}
-
-#dayCurrentNow{
-    font-weight: bold;
-    font-size: 20px;
-    color: #000;
-}
-
-#noEvents{
-    padding-left: 10px;
-    color: red;
-}
-
-#eventsToDo{
-    padding-left: 10px;
-}
 
 
 
-.displayspoti{
+.displayUsers{
     width: 30%;
     height: 200px;
     background-color: #fff;
@@ -231,18 +208,30 @@
     border-radius: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
-    text-align: center;
+    text-align: left;
     align-items: center;
     opacity: 0.9;
     overflow-x: scroll;
     vertical-align: center;
 }
 
-#noSong{
-    text-align: center;
-    color: /* light gray */ #d3d3d3;
+#displayUERS h3{
+    text-align: left;
+    border-left: 3px solid red;
+    padding-left: 5px;
 }
 
+#displayUERS h5{
+    text-align: left;
+    padding-left: 5px;
+    margin-top: 1%;
+    font-weight: lighter;
+}
+
+#displayUSERS img{
+    border-radius: 50%;
+    border: 1px solid #000;
+}
 .displaySomething{
     width: 30%;
     margin-right: 1%;
@@ -263,5 +252,48 @@
     text-align: center;
     color: #000;
     text-align: left;
-    margin-left: 1.5%;
+    border-left: 3px solid gray;
+    padding-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+.allbelow{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.allbelow ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.allbelow li{
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    vertical-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0, 5%, 0 ,5%;
+}
+
+
+#unlockNow{
+    display: none;
 }

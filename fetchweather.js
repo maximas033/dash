@@ -37,6 +37,15 @@ function gettheCurrentWeather(){
             else if (data.weather[0].description === "mist") {
                 document.getElementById("picture").src = "mist.png";
             }
+            else if (data.weather[0].description === "haze") {
+                document.getElementById("picture").src = "mist.png";
+            }
+            else if (data.weather[0].description === "overcast clouds") {
+                document.getElementById("picture").src = "clouds.png";
+            }
+            else if (data.weather[0].description === "smoke") {
+                document.getElementById("picture").src = "smoke.png";
+            }
             return data
         })
         // display weather description inside weatherDescription element
