@@ -1,0 +1,308 @@
+*{
+    background-color: /* cool looking light grey */ #e6e6e6;
+    font-family: 'Assistant', sans-serif;
+}
+
+/* ``````````````````````````````````````````````````````````````` */
+.topInformation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.greeting{
+    text-align: left;
+    margin-left: 2.5%;
+    font-size: 25px;
+    color: rgb(98, 97, 97);
+    font-weight: bolder;
+}
+
+#displayingGreeting{
+    margin-bottom: 0;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+#displayingTime{
+    color:rgb(98, 97, 97) ;
+    margin-right: 2.5%;
+}
+
+#compliments{
+    text-align: left;
+    font-size: 15px;
+    margin-left: 0.5%;
+    color: rgb(98, 97, 97);
+    font-weight: lighter;
+    margin-top: -1%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#idOnline{
+    font-size: 15px;
+    margin-left: 0.5%;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/*``````````````````````````````````````````````````````````````````````````````*/
+.threesquares{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.threesquares .calendar{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 1%;
+}
+
+.calendar h2{
+    text-align: left;
+    padding-left: 1%;
+    border-left: 2.5px solid red;
+    background-color: white;
+}
+
+.calendar #calendarEvents{
+    background-color: white;
+}
+
+#calendarEvents li{
+    list-style-type: none;
+    font-size: 15px;
+    background-color: white;
+}
+
+#eventsNumber{
+    font-size: 13px;
+    background-color: white;
+    text-align: right;
+}
+
+
+
+.threesquares .reminders{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 1%;
+}
+
+.reminders h2{
+    text-align: left;
+    padding-left: 1%;
+    border-left: 2.5px solid orange;
+    background-color: white;
+}
+
+
+
+
+.threesquares .spotify{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 1%;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.spotify h2{
+    text-align: left;
+    padding-left: 1%;
+    border-left: 2.5px solid green;
+    background-color: white;
+}
+
+.spotify #spotifyMusic{
+    background-color: white;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* `````````````````````````````````````````````````````````````````````````````````````*/
+
+
+
+
+
+
+
+
+
+.twosquares{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.twosquares .weather{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 1%;
+}
+
+.weather h2{
+    text-align: left;
+    padding-left: 0.5%;
+    border-left: 2.5px solid rgb(0, 157, 255);
+    background-color: white;
+}
+
+.topWeather{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.topWeather #cityName{
+    background-color: white;
+    margin-left: 1%;
+    margin-top: 1%;
+    font-weight: bolder;
+}
+
+img{
+    background-color: transparent;
+    margin-top: -1%;
+}
+
+.bottomWeather{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -1%;
+}
+
+#temperature{
+    background-color: white;
+    margin-left: 1%;
+    margin-top: 1%;
+    font-weight: bolder;
+    border-left: none;
+}
+
+#weatherDescription{
+    background-color: white;
+    border: none;
+    font-weight: lighter;
+    color: /* coold grey */ rgb(98, 97, 97);
+}
+
+.feelslike{
+    background-color: white;
+    margin-top: -1%;
+    font-weight: lighter;
+    color: /* coold grey */ rgb(98, 97, 97);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#feelsLikedeg{
+    background-color: white;
+    margin-left: 1%;
+    margin-top: -1%;
+    font-weight: lighter;
+    color: /* coold grey */ rgb(98, 97, 97);
+}
+
+#windSpeed{
+    background-color: white;
+    margin-left: 1%;
+    margin-top: -1%;
+    font-weight: lighter;
+    color: /* coold grey */ rgb(98, 97, 97);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#humidity{
+    background-color: white;
+    margin-left: 1%;
+    margin-top: -1%;
+    font-weight: lighter;
+    color: /* coold grey */ rgb(98, 97, 97);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.twosquares .GithubInfo{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 1%;
+}
+
+.GithubInfo h2{
+    text-align: left;
+    padding-left: 1%;
+    border-left: 2.5px solid black;
+    background-color: white;
+}
+
+.githubInformation{
+    background-color: white;
+    color: black;
+}
+
+#githubReposName{
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1%;
+}
+
+#gitIssues h4{
+    background-color: white;
+    color: black;
+    font-weight: lighter;
+    margin-bottom: 1%;
+    text-align: right;
+}

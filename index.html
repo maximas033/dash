@@ -1,158 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Smart Home DashBoard</title>
-    <!-- Link to the css files -->
-    <link rel="stylesheet", type="text/css", href="dashboarddecoration.css">
-    <!-- Google Fonts -->
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-        <!-- FIREBASE -->
-        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>  
-        <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
   </head>
-  <body onload="gettheCurrentWeather(), getCalendarEvents(), backgroundBlue(), displayFullDay()">
-    <section class="currenttime">
+  <body onload="Greetings(), updateStatus(), showTimeNow(), getCalendarEvents(),  gettheCurrentWeather(), getGithubRepos(), getSpotifyMusic()">
+    <section class="greeting">
         <div>
-            <h1 id="displayTime"></h1>
+            <div class="topInformation">
+                <h1 id="displayingGreeting"></h1>
+                <h1 id="displayingTime"></h1>
+            </div>
+            <h4 id="compliments"></h4>
+            <h4 id="idOnline"></h4>
         </div>
     </section>
 
-    <section>
-        <div class="alert">
-            <h1 id="lockModeOn">LOCK DOWN MODE ON</h1>
+
+    <section class="threesquares">
+        <div class="calendar">
+            <h2>Calendar</h2>
+            <div id="calendarEvents">
+
+            </div>
+            <div id="eventsNumber">
+
+            </div>
+        </div>
+
+        <div class="reminders">
+            <h2>Reminders</h2>
+        </div>
+
+        <div class="spotify">
+            <h2>Spotify</h2>
+            <div id="spotifyMusic">
+
+            </div>
         </div>
     </section>
 
-<section class="allInformation">
 
-    <section class="topInformation">
-        <!-- top 3 -->
-        <section class="displayJoke">
-            <div>
-                <h1 id="greeting2"></h1>
-                <h3 id="wishes"></h3>
-            </div>
-        </section>
 
-        <!-- Displays weather -->
-        <section class="displayWeather" id="WEath">
-            <div class="one">
-                <div>
-                    <h5 id="cityName"></h5>
+    <section class="twosquares">
+        <div class="weather">
+            <h2>Weather</h2>
+                <div class="topWeather">
+                    <h1 id="cityName"></h1>
+                    <img src="" id="weatherPicture" width="50" height="50">
                 </div>
-                <div id="displayP">
-                    <img src="" id="picture">
-                </div>
-            </div>
 
-            <div class="two">
-                <div>
-                    <h5 id="weatherDescription"></h5>
-                </div>
-                <div>
+                <div class="bottomWeather" >
                     <h2 id="temperature"></h2>
+                    <h4 id="weatherDescription"></h4>
+                </div>
+
+                <div class="feelslike">
+                    <h4 id="feelsLikedeg"></h4>
+                    <h4 id="windSpeed"></h4>
+                    <h4 id="humidity"></h4>
+                </div>
+        </div>
+
+        <div class="GithubInfo">
+            <h2>Github</h2>
+            <div class="githubInformation">
+                <div id="githubReposName">
+                    
+                </div>
+                <div id="gitIssues">
+                   <h4>Known Issues: 0</h4>
                 </div>
             </div>
-
-            <div class="three">
-                <div>
-                    <h5 id="timerise"></h5>
-                </div>
-
-                <div>
-                    <h5 id="timeset"></h5>
-                </div>
-            </div>
-        </section>
-
-        <section class="displayFullDay">
-                <div>
-                    <h1 id="greeting"></h1>
-                    <h3 id="date"></h3>
-                </div>
-        </section>
-
+        </div>
     </section>
-        
-
-
-<div class="allsecond">
-    <section class="bottomInformation">
-        <div></div>
-        <!-- Calendar information-->
-        <section class="displayReminders">
-            <h3 id="updatePosition"></h3>
-            <h4 id="updatedTime"></h4>
-        </section>
-
-
-        <section class="displayUsers">
-            <div id="displayUERS">
-                <h3>USERS</h3>
-                <img src="maximasfed.PNG" width="50px" height="35px">
-                <h5>Maxim Feodrets</h5>
-            </div>
-        </section>
-
-
-
-
-            <!-- Spotify information-->
-            <section class="displaySomething">
-                <h2>Calendar</h2>
-
-                <div id="eventsToDo">
-
-                </div>
-            </section>
-            <div></div>
-    </section>
-</div>
-</section>
-
-
-<section class="allbelow">
-    <div>
-        <ul>
-            <li id="donotshow">
-                <img src="exit.png" id="leaving" width="35", height="35" onclick="leavingHome()">
-            </li>
-            <li id="donotshow2">
-                <img src="exit.png" id="ariving" width="35", height="35" onclick="arivingHome()">
-            </li>
-            <li id="donotshow3">
-                <img src="nightmode.png" id="nightmodeon" width="35", height="35" onclick="turnOn()">
-            </li>
-            <li id="donotshow4">
-                <img src="lightmode.png" id="nightmodeon" width="35", height="35" onclick="turnOff()">
-            </li>
-            <li id="donotshow5">
-                <img src="lock.png" id="lockdownMode" width="35", height="35" onclick="lock()">
-            </li>
-            <li id="unlockNow">
-                <img src="unlock.png" id="unlockMode" width="35", height="35" onclick="unlock()">
-            </li>
-        </ul>
-    </div>
-</section>
-
-
-    <script src="displayTime.js"></script>
-    <script src="changebackground.js"></script>
-    <script src="fetchweather.js"></script>
-    <script src="getCalendarEvents.js"></script>
-    <script src="displayCurrentDay.js"></script>
-    <script src="greetingsecond.js"></script>
-    <script src="turnonNightMode.js"></script>
-    <script src="leavingHome.js"></script>
-    <script src="onloadingScreen.js"></script>
-    <script src="lockdownmode.js"></script>
-    <script src="unlockMode.js"></script>
+    <script src="greetingUser.js"></script>
+    <script src="displayingtime.js"></script>
+    <script src="amIOnline.js"></script>
+    <script src="calendarEventsOnMyCalendar.js"></script>
+    <script src="spotifyPlay.js"></script>
+    <script src="getTheWEatherInformation.js"></script>
+    <script src="spotifyPlay.js"></script>
+    <script src="github.js"></script>
   </body>
 </html>
