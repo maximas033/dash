@@ -9,8 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
   </head>
-  <body onload="Greetings(), updateStatus(), showTimeNow(), getCalendarEvents(),  gettheCurrentWeather(), getGithubRepos(), getSpotifyMusic()">
+  <body onload="getLockDownDatatwo(), Greetings(), updateStatus(), showTimeNow(), getCalendarEvents(),  gettheCurrentWeather(), getGithubRepos(), getSpotifyMusic()">
     <section class="greeting">
         <div>
             <div class="topInformation">
@@ -23,7 +27,7 @@
     </section>
 
 
-    <section class="threesquares">
+    <section class="threesquares" id="threeesquares">
         <div class="calendar">
             <h2>Calendar</h2>
             <div id="calendarEvents">
@@ -48,7 +52,7 @@
 
 
 
-    <section class="twosquares">
+    <section class="twosquares" id="twoSquaress">
         <div class="weather">
             <h2>Weather</h2>
                 <div class="topWeather">
@@ -80,6 +84,25 @@
             </div>
         </div>
     </section>
+
+
+    <section class="navigationStuff" id="listNAvigation">
+        <div>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="index.html">Settings</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="unlockLock"> 
+        <div>
+            <img src="unlock.png" onclick="unlockDashboard()" width="35" height="35">
+        </div>
+    </section>
+    <script src="onload2.js"></script>
+    <script src="unlock.js"></script>
     <script src="greetingUser.js"></script>
     <script src="displayingtime.js"></script>
     <script src="amIOnline.js"></script>
@@ -88,5 +111,12 @@
     <script src="getTheWEatherInformation.js"></script>
     <script src="spotifyPlay.js"></script>
     <script src="github.js"></script>
+    <script src="lockdownNow.js"></script>
+    <script>
+        // refresh the page every 5 minutes
+        setInterval(function(){
+            window.location.reload();
+        }, 300000);
+    </script>
   </body>
 </html>

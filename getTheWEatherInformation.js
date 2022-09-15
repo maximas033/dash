@@ -43,6 +43,9 @@ function gettheCurrentWeather(){
             else if (data.weather[0].description === "overcast clouds") {
                 document.getElementById("weatherPicture").src = "clouds.png";
             }
+            else if (data.weather[0].description === "broken clouds") {
+                document.getElementById("weatherPicture").src = "clouds.png";
+            }
             else if (data.weather[0].description === "smoke") {
                 document.getElementById("weatherPicture").src = "smoke.png";
             }

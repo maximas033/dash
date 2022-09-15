@@ -1,6 +1,10 @@
 *{
-    background-color: /* cool looking light grey */ #e6e6e6;
     font-family: 'Assistant', sans-serif;
+}
+
+body{
+    margin-bottom: 1%;
+    background-color: /* cool looking light grey */ #e6e6e6;
 }
 
 /* ``````````````````````````````````````````````````````````````` */
@@ -305,4 +309,52 @@ img{
     font-weight: lighter;
     margin-bottom: 1%;
     text-align: right;
+}
+
+
+
+
+
+
+/*``````````````````````````````````````````````````````````````````````````*/
+.navigationStuff{
+   padding-top: 1%;
+   margin-right: 3%;
+}
+
+.navigationStuff ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+ul li{
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: gray;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+/* ````````````````````````````````````````````````````````````````````````*/
+#unlockLock{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
 }

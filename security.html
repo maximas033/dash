@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="security.css" type="text/css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  </head>
+
+  <body onload="Greetings(), updateStatus(), showTimeNow(), getLockDownData()">
+    <section class="greeting" id="greet">
+        <div>
+            <div class="topInformation">
+                <h1 id="displayingGreeting"></h1>
+                <h1 id="displayingTime"></h1>
+            </div>
+            <h4 id="compliments"></h4>
+            <h4 id="idOnline"></h4>
+        </div>
+    </section>
+
+    <section class="lockdownDescription" id="messagedisplay">
+        <div>
+            <h1>LOCKDOWN MODE</h1>
+            <p>Lockdown mode will completely lock this dashboard and won't be able to be accessed unless the right password is provided.</p>
+            <p id="off">Turn this on only under extreme situations</p>
+            <ul style="color:red;" id="off">
+                <li>SECURITY BREACH</li>
+                <li>DANGER FOR ANY INFORMATION</li>
+                <li>INFORMATION LEAK</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="lockdownData" id="dataLockDown">
+        <div>
+            <h1>Lockdown data:</h1>
+            <p>NAN</p>
+        </div>
+    </section>
+
+
+    <section class="lockButton" id="buttnot">
+        <div>
+            <button onclick="lockDown()">LOCKDOWN</button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="navigationStuff" id="listNAvigation">
+        <div>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="index.html">Settings</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="unlockLock"> 
+        <div>
+            <img src="unlock.png" width="35" height="35" onclick="unlockDashboard()">
+        </div>
+    </section>
+    <script src="onload.js"></script>
+    <script src="greetingUser.js"></script>
+    <script src="displayingtime.js"></script>
+    <script src="amIOnline.js"></script>
+    <script src="lockdownNow.js"></script>
+    <script src="unlock.js"></script>
+    <script>
+        // refresh the page every 5 minutes
+        setInterval(function(){
+            window.location.reload();
+        }, 300000);
+    </script>
+  </body>
+</html>
